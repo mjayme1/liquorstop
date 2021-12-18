@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     color: #777;
     font-family: 'Libre Franklin',sans-serif;
     font-size: 15px;
