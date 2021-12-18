@@ -19,6 +19,10 @@ body {
     font-family: "Shadows Into Light";
 }
 
+.shadow-inner {
+  box-shadow: inset 0 5px 9px 0 rgb(0 0 0 / 15%);
+}
+
 .jumbotron {
     color: white;
     background: radial-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.45)), url("../img/liquor-store.jpeg");
@@ -315,7 +319,7 @@ body {
 
   /* Section 2 */
 .section-2 {
-  background-color: #c3c3c31f;
+  background-color: #f9fff3;
   height: 100%;
   padding: 110px 110px 70px;
 }
@@ -344,7 +348,7 @@ body {
   font-weight: 600;
   font-size: 15px;
   padding: 14px 40px 12px;
-  border-radius: 0;
+  border-radius: 0.3rem;
   transition: .5s;
 }
 
@@ -389,18 +393,6 @@ body {
   color: #505050;
 }
 
-
-/* Section 3 */
-/* .section-3 {
-  color: white;
-  background-image: url("../img/section-3-bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 300px;
-} */
-
 /* Section 4 */
 .section-4 {
   background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url("../img/section-3-bg.jpg");
@@ -434,10 +426,12 @@ body {
 
 
 /* Contact US */
+
 .contact-us {
+  background-color: #f0ffe269;
   padding: 120px 0 0;
-  background-color: #c3c3c31f;
 }
+
 
 .contact-us .questions {
   font-size: 17px;
@@ -448,48 +442,105 @@ body {
   line-height: .7;
 }
 
-
-.contact-us .box {
-  margin-top: 20px;
-  border: 1px solid rgb(219, 219, 219);
-  padding: 70px;
-  background: #fbfbfb;
-  box-shadow: 0 16px 21px -2px rgb(0 0 0 / 2%), 0 10px 10px -5px rgb(0 0 0 / 2%);
+.contact-us input.form-control {
+  height: calc(2em + 0.75rem + 2px);
+  border-radius: 0;
 }
 
-.contact-us .btn-warning,
-.contact-us .btn-warning:hover,
-.contact-us .btn-warning:focus,
-.contact-us .btn-warning:active {
+
+section .box {
+  margin: 0 auto;
+  padding: 35px 50px 40px;
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Libre Franklin',sans-serif;
+}
+
+.form-group label {
+  font-size: 17px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 3px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"],
+button[type="submit"]:focus,
+button[type="submit"]:active {
   color: rgb(33, 37, 41);
-  background-color: #020202 !important;
-  border-color: #000000 !important;
+  background-color: #020202;
   padding-top: 14px;
   padding-bottom: 10px;
   letter-spacing: .15em;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.6s ease background-color;
+  margin-top: 10px;
 }
 
-.contact-us input.form-control {
-  height: calc(2.3em + 0.75rem + 2px);
-  border-radius: 0;
+button[type="submit"]:hover {
+  color: #fff;
+  background-color: #017d53;
 }
 
-.contact-us .form-control {
-  border-radius: 0;
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
-button[type="submit"] {
-  border-radius: 0;
-}
+
 
 .contact-us .info p {
   font-size: 18px;
   margin-right: 13px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(128, 128, 128, 0.15);
   padding: 11px 26px;
   margin-bottom: 0;
-  background: #fbfbfb;
+  background: #ffffff;
   color: #444444;
+  border-radius: 0.3rem;
 }
   
 .contact-us .info p:hover {
