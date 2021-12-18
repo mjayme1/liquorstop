@@ -1,14 +1,36 @@
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    items:4, 
-  // items change number for slider display on desktop
+$(document).ready(function() {
+  // Swiper: Slider
+      new Swiper('.swiper-container', {
+          autoplay: {
+            delay: 2500,
+          },
+          loop: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          paginationClickable: true,
+          spaceBetween: 20,
+          breakpoints: {
+              1520: {
+                  slidesPerView: 4,
+                  spaceBetween: 50
+              },
+              1028: {
+                  slidesPerView: 3,
+                  spaceBetween: 40
+              },
+              800: {
+                slidesPerView: 2,
+                spaceBetween: 10
+              },
+              480: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+              }
+          }
+      });
+  });
   
-    loop:true,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:3000,
-    autoplayHoverPause:true
-});
+
 
 
 window.addEventListener("DOMContentLoaded", function () {
