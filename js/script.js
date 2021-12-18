@@ -5,6 +5,7 @@ $(document).ready(function() {
             delay: 2500,
           },
           loop: true,
+          slidesPerView: 'auto',
           paginationClickable: true,
           spaceBetween: 20,
           breakpoints: {
@@ -28,7 +29,6 @@ $(document).ready(function() {
       });
   });
   
-
 
 
 window.addEventListener("DOMContentLoaded", function () {
