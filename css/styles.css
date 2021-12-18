@@ -46,6 +46,10 @@ body {
     letter-spacing: 0px;
 }
 
+.tagline {
+  padding-top: 60px;
+}
+
 .jumbotron .beer-on-hand_1,
 .jumbotron .beer-on-hand_2 {
     position: absolute;
@@ -53,10 +57,12 @@ body {
 
 .jumbotron .beer-on-hand_1 {
     left: -130px;
+    top: 30%;
 }
 
 .jumbotron .beer-on-hand_2 {
     right: -110px;
+    top: 30%;
 }
 
 
@@ -94,6 +100,19 @@ body {
 }
 
 .navbar .contact {
+  margin-top: 1.5rem;
+}
+
+.logo-container {
+  text-align: left;
+  padding: .5rem 0;
+}
+
+.contact-container {
+  text-align: right;
+}
+
+.navbar .contact a {
     background: #ff9f04;
     display: inline;
     padding: 12px 20px 13px;
@@ -103,6 +122,10 @@ body {
     font-size: 18px;
     border-radius: 0;
     transition: .5s;
+}
+
+.navbar-brand img  {
+  width: 380px;
 }
 
 .btn-animated:hover {
@@ -311,6 +334,10 @@ body {
 }
 
 .section-2 .btn-contact {
+  margin-top: 3rem;
+}
+
+.section-2 .btn-contact .btn {
   color: #fff;
   background-color: #000;
   letter-spacing: .15em;
@@ -321,7 +348,7 @@ body {
   transition: .5s;
 }
 
-.section-2 .btn-contact:hover {
+.section-2 .btn-contact .btn:hover {
   color: #fff;
   background-color: #017d53;
 }
@@ -342,12 +369,18 @@ body {
   color: #017d53;
 }
 
-.section-2 a.item-img {
+.section-2 .item-img {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.section-2 .item-img a {
   filter: inherit;
   transition: .3s;
 }
 
-.section-2 a.item-img:hover {
+.section-2 .item-img a:hover {
   filter: invert(22%) sepia(81%) saturate(3921%) hue-rotate(156deg) brightness(89%) contrast(99%);
 }
 
@@ -456,22 +489,20 @@ button[type="submit"] {
   padding: 11px 26px;
   margin-bottom: 0;
   background: #fbfbfb;
-  transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #444444;
 }
   
 .contact-us .info p:hover {
-  color: #fff;
-  background: #141414;
   cursor: pointer;
 }
 
-.contact-us .info p:hover i {
-  color: rgb(35, 224, 161);
-}
 
 .contact-us .info p i {
   color: #017d53;
+}
+
+.contact-us .info .socials {
+  margin-left: auto;
 }
 
 .contact-us .info .socials a {
@@ -510,28 +541,51 @@ button[type="submit"] {
 /* SECTION 5 */
 .section-5 {
   margin-top: -11px;
+}/* 
+
+.gallery {
+  display: flex;
 }
 
-.section-5 .images  {display: inline-block;
-  width: 410px;
+.gallery .box {
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.gallery .box-1 {
+  background-image: url(../img/image-5.jpg);
+}
+
+.gallery .box-2 {
+  background-image: url(../img/image-4.jpg);
+}
+
+.gallery .box-3 {
+  background-image: url(../img/image-1.jpg);
+}
+
+.gallery .box-4 {
+  background-image: url(../img/image-2.jpg);
+} */
+
+
+.section-5 .images  {
+  display: inline-block;
+  width: 100%;
   height: 410px;
   background-color: #000 !important;
-  margin: 5px 0 0 0!important;
+  margin: 5px 0 0 0;
   padding:0; 
   overflow: hidden;
 }
 
 .section-5 img {
   object-fit: cover;
-  width: 410px;
-  height: 410px;
-  transition: transform 2.5s ease-out;
-}
-
-.section-5 img:hover {
-  opacity:0.7 !important;
-  transition: 0.75s ease-in-out;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.75s ease-out;
 }
 
 .images:hover img {
@@ -547,6 +601,7 @@ footer {
 
 .footer-top {
   background-color: #1b1b1b;
+  padding: 1.5rem 0;
 }
 
 .footer-bottom {
@@ -561,4 +616,235 @@ footer {
 .footer-bottom p:hover {
   color: #fff;
   cursor: pointer;
+}
+
+
+/* Media Queries */
+
+@media all and (max-width: 1400px){
+  .jumbotron h1 {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+}
+
+@media all and (max-width: 1200px){
+  .jumbotron .beer-on-hand_1 img,
+  .jumbotron .beer-on-hand_2 img {
+    width: 430px;
+  }
+
+  .navbar .address {
+    font-size: 18px;
+  }
+
+  .navbar .contact a {
+    font-size: 16px;
+    padding: 10px 18px 11px;
+  }
+
+  .jumbotron h1 {
+    font-size: 100px;
+    line-height: 92px;
+  }
+
+  .navbar-brand img  {
+    width: 350px;
+  }
+
+  .section-2 {
+    padding: 60px 50px;
+  }
+
+  .section-5 .images {
+    height: 305px;
+  }
+
+  .jumbotron h1 {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .section-2 .btn-contact {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .section-2 .intro {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 1049px){
+  .jumbotron .beer-on-hand_1 img,
+  .jumbotron .beer-on-hand_2 img {
+    width: 390px;
+  }
+
+  .jumbotron h1 {
+    font-size: 85px;
+    line-height: 85px;
+  }
+
+  .navbar-brand img {
+    width: 335px;
+  }
+}
+
+
+@media all and (max-width: 800px){
+  .jumbotron .beer-on-hand_1 img,
+  .jumbotron .beer-on-hand_2 img {
+    display: none;
+  }
+
+  .jumbotron h1 {
+    width: 100%;
+  }
+
+  .navbar .address {
+    display: none;
+  }
+
+  .navbar .contact {
+    margin-top: 0;
+  }
+
+  .section-2 h1.title_2 {
+    font-size: 45px;
+  }
+
+  .section-2 .btn-contact .btn {
+    display: none;
+  }
+
+  .section-2 .item-paragraph {
+    line-height: 23px;
+  }
+
+  .section-2 .item-titles {
+    font-size: 24px;
+  }
+
+  .section-2 {
+    padding: 40px;
+  }
+
+  .contact-us .info p a {
+    font-size: 15px;
+  }
+
+  .contact-us .questions {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .contact-us .info .socials a.facebook {
+    font-size: 46px;
+  }
+
+  .contact-us .info .socials a.insta {
+    font-size: 48px;
+  }
+
+  .contact-us .box {
+    padding: 55px
+  }
+
+  .contact-us {
+    padding: 70px 10px 0;
+  }
+
+  .contact-us .map {
+    margin: 70px 0 0;
+  }
+
+  .section-5 .images {
+    margin: -5px;
+  }
+
+  .footer-top img {
+    height: 90px;
+  }
+
+  .footer-top {
+    background-color: #1b1b1b;
+    padding: 1rem 0;
+  }
+
+  .jumbotron h1 {
+    font-size: 103px;
+    line-height: 90px;
+  }
+}
+
+@media all and (max-width: 769px) {
+  .contact-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .logo-container {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 670px){
+  .contact-us .info {
+    flex-wrap: wrap;
+  }
+
+  .contact-us .info p {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .contact-us .info .socials {
+    margin-left: 0;
+  }
+}
+
+
+@media all and (max-width: 570px){
+  .contact-us .info {
+    flex-wrap: wrap;
+  }
+
+  .contact-us .info p {
+    margin-right: 5px;
+  }
+
+  .contact-us .info .socials {
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .jumbotron h1 {
+    font-size: 80px;
+    line-height: 70px;
+  }
+
+  .section-2 .item-img {
+    text-align: left;
+    margin: 0 5px;
+  }
+
+  .section-2 .item-content {
+    margin-bottom: 0;
+  }
+
+  .section-2 {
+    padding: 40px 60px;
+  }
+
+  .contact-us .box {
+    padding: 40px 30px;
+ }
+
+ .contact-us h1 {
+  font-size: 45px;
+ }
 }
