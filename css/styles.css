@@ -895,6 +895,7 @@ footer {
 
  .section-4 {
    padding: 30px 20px;
+   overflow: hidden;
  }
 }
 
