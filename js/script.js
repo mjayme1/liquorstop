@@ -5,8 +5,6 @@ $(document).ready(function() {
             delay: 2500,
           },
           loop: true,
-          nextButton: '.swiper-button-next',
-          prevButton: '.swiper-button-prev',
           paginationClickable: true,
           spaceBetween: 20,
           breakpoints: {
